@@ -1,12 +1,12 @@
-pipeline{
+pipeline {
 agent any
-stages{
-stage('checkout'){
-steps{
+stages {
+stage('checkout') {
+steps {
 git branch:'main',url:'https://github.com/Deyaa2017/practice.git'
 }
-stage('shell_script'){
-steps{
+stage('shell_script') {
+steps {
 sh'''
 ls -la
         '''
