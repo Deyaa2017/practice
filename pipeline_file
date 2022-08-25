@@ -3,7 +3,7 @@ pipeline {
        stages {
           stage('checkout') {
                        steps {
-                     git branch: 'main', url: 'https://github.com/Deyaa2017/practice.git'
+                     git branch: 'main', url: 'git@github.com:Deyaa2017/private_key.git'
                              }
                             } 
 stage(shell_script) {
