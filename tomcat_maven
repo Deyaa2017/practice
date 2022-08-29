@@ -1,0 +1,13 @@
+pipeline{
+agent any
+environment
+{
+nikon=credentials('virginia')
+}
+tool{
+maven 'maven'
+}
+stages{
+stage('checkout'){
+steps{
+git branch :'main' ,url:'
