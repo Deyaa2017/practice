@@ -11,9 +11,17 @@ stages{
 stage('checkout'){
 steps{
 git branch :'main' ,url:'https://github.com/Deyaa2017/practice.git'
-}
+   }
+  } 
 stage(shell_script){
 steps{
 sh'''
 mvn clean package
-scp 
+scp -o stricthostkeychecking=no -i $nikon target/loginwebapp.war ec2-user@ec2-34-207-153-182.compute-1.amazonaws.com:/usr/share/tomcat/webapp
+                    '''
+               }
+            }
+         }
+      }   
+         
+          
